@@ -18,3 +18,22 @@ let contact = { email: "example@gmail.com" };
 contact.tel = "207-662-5412";
 console.log(contact);
 console.log(contact.tel);
+
+// nested object and properties
+let test = {
+  nr: 10,
+  b: false,
+  str: "uno dos tres",
+  arr: [10, 20, 30],
+  obj: {
+    x: 10,
+    y: 20,
+  },
+  fn: function (arg) {
+    console.log(arg);
+  },
+};
+
+test.fn(123);
+console.log(`x: ${test.obj.x}`);
+console.log(`y: ${test.obj.y}`);
