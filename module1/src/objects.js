@@ -37,3 +37,21 @@ let test = {
 test.fn(123);
 console.log(`x: ${test.obj.x}`);
 console.log(`y: ${test.obj.y}`);
+
+// functions as a property type - methods
+let point = {
+  x: 0,
+  y: 0,
+  moveHorizontally: function (distance) {
+    this.x += distance;
+    console.log(this.x);
+  },
+  moveVertically: function (distance) {
+    this.y += distance;
+    console.log(this.y);
+  },
+};
+
+console.log(point.x);
+point.moveHorizontally(30);
+point.moveVertically(54);
