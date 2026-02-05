@@ -11,3 +11,10 @@ console.log(`Id: ${sampleObject.id}`);
 console.log(`Delay: ${sampleObject.delay}`);
 console.log(`Name: ${sampleObject.name}`);
 console.log(`Is present: ${sampleObject.isPresent}`);
+
+// create an object
+let contact = { email: "example@gmail.com" };
+
+contact.tel = "207-662-5412";
+console.log(contact);
+console.log(contact.tel);
