@@ -63,3 +63,8 @@ contact.email = {
 };
 
 console.log(contact.email.work);
+
+// deleting a property
+delete contact.email.work;
+console.log(contact.email.work);
+console.log(contact.email.private);
