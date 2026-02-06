@@ -73,3 +73,16 @@ console.log(contact.email.private);
 for (field in contact) {
   console.log(field);
 }
+
+// copying objects
+let point0 = { x: 10, y: 20 };
+let point1 = point0;
+let point2 = {};
+let point3 = {};
+
+Object.assign(point2, point0);
+Object.assign(point3, point0, { z: 100 });
+console.log(`x: ${point2.x}`);
+console.log(`y: ${point2.y}`);
+console.log(`z: ${point3.z}`);
+console.log(point0 === point1);
