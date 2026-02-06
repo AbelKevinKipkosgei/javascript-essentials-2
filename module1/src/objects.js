@@ -68,3 +68,8 @@ console.log(contact.email.work);
 delete contact.email.work;
 console.log(contact.email.work);
 console.log(contact.email.private);
+
+// enumeration
+for (field in contact) {
+  console.log(field);
+}
