@@ -55,3 +55,11 @@ let point = {
 console.log(point.x);
 point.moveHorizontally(30);
 point.moveVertically(54);
+
+// modifying properties
+contact.email = {
+  private: "RonaldSMurphy@freepost.org",
+  work: "rsmurphy@briazz.com",
+};
+
+console.log(contact.email.work);
