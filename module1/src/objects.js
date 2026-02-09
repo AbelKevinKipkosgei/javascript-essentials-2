@@ -86,3 +86,8 @@ console.log(`x: ${point2.x}`);
 console.log(`y: ${point2.y}`);
 console.log(`z: ${point3.z}`);
 console.log(point0 === point1);
+
+// overwriting properties
+let point4 = {};
+Object.assign(point4, point3, { z: 200, color: "peach" });
+console.log(point4);
