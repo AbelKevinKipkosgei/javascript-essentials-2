@@ -91,3 +91,11 @@ console.log(point0 === point1);
 let point4 = {};
 Object.assign(point4, point3, { z: 200, color: "peach" });
 console.log(point4);
+
+// spread operator
+let point7 = { x: 10, y: 20 };
+let point8 = { ...point7 };
+let point9 = { ...point7, z: 100, color: "brown", range: 100, pressure: 2999 };
+
+console.log(point8);
+console.log(point9);
