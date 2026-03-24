@@ -3,6 +3,9 @@ let contact = {
   get tel() {
     return this._tel;
   },
+  set tel(t) {
+    this._tel = t;
+  },
 };
 
 console.log(contact.tel);
