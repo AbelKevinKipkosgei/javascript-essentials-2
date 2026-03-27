@@ -1,7 +1,7 @@
 let createColoredPoint = function (x, y, color) {
   let _info = "...object under construction";
   let _color = color;
-  console.log(info);
+  console.log(_info);
   return {
     x,
     y,
