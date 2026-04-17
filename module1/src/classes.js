@@ -1,20 +1,22 @@
 class Vehicle {
+  status = "unavailable";
+  #latitude;
+  #longitude;
   constructor({ id, latitude, longitude }) {
     this.id = id;
-    this.status = "unavailable";
     this.setPosition({ latitude, longitude });
   }
 
   setPosition({ latitude, longitude }) {
     this.time = Date.now();
-    this.latitude = latitude;
-    this.longitude = longitude;
+    this.#latitude = latitude;
+    this.#longitude = longitude;
   }
 
   getPosition() {
     return {
-      latitude: this.latitude,
-      longitude: this.longitude,
+      latitude: this.#latitude,
+      longitude: this.#longitude,
     };
   }
 }
