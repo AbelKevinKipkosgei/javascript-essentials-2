@@ -4,16 +4,16 @@ class Vehicle {
   #longitude;
   constructor({ id, latitude, longitude }) {
     this.id = id;
-    this.setPosition({ latitude, longitude });
+    this.position = { latitude, longitude };
   }
 
-  setPosition({ latitude, longitude }) {
+  set position({ latitude, longitude }) {
     this.time = Date.now();
     this.#latitude = latitude;
     this.#longitude = longitude;
   }
 
-  getPosition() {
+  get position() {
     return {
       latitude: this.#latitude,
       longitude: this.#longitude,
@@ -27,5 +27,6 @@ let vehicle1 = new Vehicle({
   id: "AL1024",
 });
 
-vehicle1.setPosition({ longitude: 18.193121, latitude: 59.378654 });
-console.log(vehicle1.getPosition());
+vehicle1.position = { longitude: 18.193121, latitude: 59.378654 };
+console.log(vehicle1.position);
+console.log(vehicle1.time);
