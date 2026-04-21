@@ -1,3 +1,4 @@
+// Vehicle Base Class
 class Vehicle {
   status = "unavailable";
   #latitude;
@@ -21,6 +22,15 @@ class Vehicle {
   }
 }
 
+// Bus Class
+class Bus extends Vehicle {
+  constructor({ seats, id, longitude, latitude }) {
+    super({ id, latitude, longitude });
+    this.seats = seats;
+  }
+}
+
+// Vehicle
 let vehicle1 = new Vehicle({
   longitude: 18.213423,
   latitude: 59.367628,
@@ -30,3 +40,14 @@ let vehicle1 = new Vehicle({
 vehicle1.position = { longitude: 18.193121, latitude: 59.378654 };
 console.log(vehicle1.position);
 console.log(vehicle1.time);
+
+// Bus
+let bus = new Bus({
+  seats: 4,
+  longitude: 18.213423,
+  latitude: 59.367628,
+  id: "AL1024",
+});
+
+console.log(bus.seats);
+console.log(bus.id);
