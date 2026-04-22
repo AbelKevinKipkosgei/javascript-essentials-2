@@ -13,6 +13,11 @@ class User {
       console.log(`\nRequesting help with ${course} level ${level}\n`);
     }
   }
+
+  removeCourse(course) {
+    this.course = course;
+    console.log(`\nNo longer interested in ${this.course}\n`);
+  }
 }
 
 let student1 = new User({
@@ -31,3 +36,4 @@ let student2 = new User({
 
 student1.addCourse("maths", 2);
 student1.addCourse("physics", 1);
+student1.removeCourse("physics");
