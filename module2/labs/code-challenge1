@@ -8,15 +8,21 @@ class User {
 
   addCourse(course, level) {
     if (this.role === "teacher") {
-      console.log(`\nOffering help with ${course} level ${level}\n`);
+      console.log(`\nOffering help with ${course} level ${level}`);
     } else if (this.role === "student") {
-      console.log(`\nRequesting help with ${course} level ${level}\n`);
+      console.log(`\nRequesting help with ${course} level ${level}`);
     }
   }
 
   removeCourse(course) {
     this.course = course;
-    console.log(`\nNo longer interested in ${this.course}\n`);
+    console.log(`\nNo longer interested in ${this.course}`);
+  }
+
+  editCourse(course, level) {
+    this.course = course;
+    this.level = level;
+    console.log(`\nChanged ${course} to level ${level}`);
   }
 }
 
@@ -34,6 +40,15 @@ let student2 = new User({
   role: "student",
 });
 
+let teacher1 = new User({
+  name: "Paula",
+  surname: "Thompkins",
+  email: "PaulaThompkins@jourrapide.com",
+  role: "teacher",
+});
+
 student1.addCourse("maths", 2);
 student1.addCourse("physics", 1);
 student1.removeCourse("physics");
+teacher1.addCourse("biology", 3);
+teacher1.editCourse("biology", 4);
